@@ -5,9 +5,6 @@ deployment "this" {
     dest_dir      = "this"
   }
 
-  publish_output "filename" {
-    value = deployment.this.filename
-  }
 }
 
 deployment "that" {
@@ -15,8 +12,12 @@ deployment "that" {
     deployment_string = "that"
     dest_dir          = "that"
   }
+}
 
-  publish_output "filename" {
-    value = deployment.that.filename
-  }
+publish_output "filename" {
+  value = deployment.this.filename
+}
+
+publish_output "filename" {
+  value = deployment.that.filename
 }
