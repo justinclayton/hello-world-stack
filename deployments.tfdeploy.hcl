@@ -14,10 +14,8 @@ deployment "that" {
   }
 }
 
-publish_output "filename" {
-  value = deployment.this.filename
-}
-
-publish_output "filename" {
-  value = deployment.that.filename
+publish_output "files" {
+  value = {
+    "this" = deployment.this.filename
+    "that" = deployment.that.filename
 }
