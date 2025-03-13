@@ -18,4 +18,5 @@ publish_output "files" {
   value = {
     "this" = deployment.this.filename
     "that" = deployment.that.filename
+  }
 }
